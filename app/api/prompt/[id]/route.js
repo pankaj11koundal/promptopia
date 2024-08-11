@@ -45,8 +45,6 @@ export const DELETE = async (req, { params }) => {
 
         const deletedPrompt = await Prompt.findByIdAndDelete(params.id);
 
-        console.log(deletedPrompt);
-
         return new Response('Prompt deleted sucessfully', { status: 200 })
     } catch (e) {
         return new Response('Failed to delete Prompt', { status: 500 })
