@@ -18,7 +18,6 @@ const UpdatePrompt = () => {
     
     useEffect(()=> {
         const getPromptDetails = async () => {
-            console.log('getPromptDeails is called')
             const response = await fetch(`/api/prompt/${promptId}`)
             const data = await response.json();
             
